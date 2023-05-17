@@ -1,0 +1,64 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true,
+        "jest": true,
+        "commonjs": true
+
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "overrides": [
+        {
+            "files": ["editor/test/**/*Spec.js"],
+            "globals": {
+                "describe": true,
+                "spyOn": false,
+                "expect": false
+            }
+        }
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "no-const-assign": "error",
+        "no-this-before-super": "error",
+        "no-undef": "error",
+        "no-unreachable": "error",
+        "no-unused-vars": "error",
+        "constructor-super": "error",
+        "valid-typeof": "error"
+    },
+    "ignorePatterns": [
+
+        "build",
+    
+        "node_modules"
+    
+      ]
+    //   "no-unused-vars": "off",
+    // "@typescript-eslint/no-unused-vars": ["warn"],
+    // "max-len": ["warn", {
+
+    //     "code":  120,
+
+    //     "ignoreUrls": true,
+
+    //     "ignoreComments": true, 
+
+    //     "ignoreRegExpLiterals": true
+
+    //     }
+
+    // ]
+    
+}
